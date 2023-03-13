@@ -1,5 +1,7 @@
 package com.ithomasoft.architecture.mvp.delegate;
 
+import androidx.annotation.NonNull;
+
 import com.ithomasoft.architecture.mvp.MvpPresenter;
 import com.ithomasoft.architecture.mvp.MvpView;
 import com.ithomasoft.architecture.mvp.viewstate.ViewState;
@@ -30,7 +32,8 @@ public interface MvpViewStateDelegateCallback<V extends MvpView, P extends MvpPr
   /**
    * Create the viewstate.
    */
-  @NonNull VS createViewState();
+  @NonNull
+  VS createViewState();
 
   /**
    * This method will be called by {@link MvpViewStateInternalDelegate} to inform that restoring
